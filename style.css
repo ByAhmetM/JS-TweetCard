@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-family: "Poppins";
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #1da1f2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.header {
+    font-size: 25px;
+    letter-spacing: 3px;
+    background-color: #FBDA61;
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+
+
+.wrapper {
+    background-color: #fff;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    padding: 35px 25px;
+}
+
+.input-box {
+    border-bottom: 1px solid #98a5b1a0;
+}
+
+.tweet-area {
+    position: relative;
+    min-height: 150px;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.tweet-area::-webkit-scrollbar {
+    width: 0;
+}
+
+
+
+.placeholder {
+    position: absolute;
+    color: #333;
+    font-size: 15px;
+    /* pointer events none ile tıklanabilirliğini kaldırdık */
+    pointer-events: none;
+    margin-top: 1px;
+}
+
+.input {
+    outline: none;
+    min-height: inherit;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.editable {
+    position: relative;
+    z-index: 1000;
+}
+
+.readonly {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+
+.privacy {
+    color: #1da1f2;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 40px;
+    transition: all .3s ease-in-out;
+    margin: 15px 0;
+}
+
+.privacy:hover, .icons li:hover {
+    background-color: #e7f5fe;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    gap: 35px;
+}
+
+.icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icons li {
+    color: #1da1f2;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.counter {
+    color: #333;
+    font-size: 30px;
+    border-right: 1px solid #98a5b1;
+    padding-right: 15px;
+    display: none;
+
+}
+
+.button {
+    background-color: #1da1f2;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    color: #fff;
+    font-weight: bold;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+    transition: all .2s ease;
+}
+
+.button:hover {
+    background-color: #0d8bd9;
+}
+
+.button.active {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.overTweet {
+    background-color: #ff6666;
+}
